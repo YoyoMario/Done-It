@@ -1,0 +1,66 @@
+/* ============================================================
+   Done It — Inline Task Component
+   File: css/components/task.css
+   ============================================================ */
+
+.inline-task {
+    max-width: 100%;
+    min-height: 18px;
+    padding: 0 3px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    vertical-align: baseline;
+
+    background: transparent;
+    border: 0;
+    border-radius: 4px;
+    color: var(--color-text-primary);
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.inline-task:hover {
+    background: var(--color-accent-soft);
+}
+
+.inline-task:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+.inline-task:hover .inline-task-check {
+    border-color: var(--color-accent);
+}
+
+.inline-task-check {
+    width: 13px;
+    height: 13px;
+    flex: 0 0 13px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1.5px solid var(--color-text-muted);
+    border-radius: 3px;
+    color: var(--color-surface);
+}
+
+.inline-task.is-complete {
+    color: var(--color-text-muted);
+    text-decoration: line-through;
+}
+
+.inline-task.is-complete .inline-task-check {
+    background: var(--color-success);
+    border-color: var(--color-success);
+}
+
+.inline-task.is-complete .inline-task-check::before {
+    content: "✓";
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+}
