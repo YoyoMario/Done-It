@@ -1,0 +1,175 @@
+/* ============================================================
+   Done It — Navigation Component
+   File: css/components/navigation.css
+   ============================================================ */
+
+.app-navigation {
+    width: 236px;
+    min-height: 100vh;
+    padding: 22px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-surface);
+    border-right: 1px solid var(--color-border);
+}
+
+.navigation-brand {
+    min-height: 42px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-text-primary);
+    text-decoration: none;
+}
+
+.navigation-brand-mark {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+    display: grid;
+    place-items: center;
+    background: var(--color-accent);
+    border-radius: 9px;
+    color: var(--color-surface);
+}
+
+.navigation-brand-mark svg,
+.navigation-icon {
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.navigation-brand-mark svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+}
+
+.navigation-brand-text {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.navigation-menu {
+    margin-top: 30px;
+    display: grid;
+    gap: 5px;
+}
+
+.navigation-label {
+    margin: 0 10px 7px;
+    color: var(--color-text-muted);
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.navigation-link {
+    width: 100%;
+    min-height: 42px;
+    padding: 0 11px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    background: transparent;
+    border: 0;
+    border-radius: 8px;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 120ms ease, color 120ms ease;
+}
+
+.navigation-link:hover {
+    background: var(--color-surface-hover);
+    color: var(--color-text-primary);
+}
+
+.navigation-link.is-active,
+.navigation-link[aria-current="page"] {
+    background: var(--color-accent-soft);
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.navigation-link:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+.navigation-icon {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    stroke-width: 1.8;
+}
+
+.navigation-footer {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-divider);
+}
+
+.navigation-button {
+    appearance: none;
+}
+
+/* Standalone component-preview surface only. */
+.navigation-preview {
+    display: flex;
+}
+
+@media (max-width: 720px) {
+    .app-navigation {
+        width: 100%;
+        min-height: auto;
+        padding: 10px 14px;
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+        border-right: 0;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .navigation-brand {
+        padding: 0;
+    }
+
+    .navigation-brand-text,
+    .navigation-label,
+    .navigation-footer {
+        display: none;
+    }
+
+    .navigation-menu {
+        margin: 0 0 0 auto;
+        display: flex;
+        gap: 4px;
+    }
+
+    .navigation-link {
+        width: auto;
+        min-height: 38px;
+        padding-inline: 10px;
+    }
+}
+
+@media (max-width: 440px) {
+    .navigation-link span {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+    }
+}
