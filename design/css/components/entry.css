@@ -1,5 +1,6 @@
 .entry-time-field {
     width: fit-content;
+    margin-inline-start: -7px;
     padding: 4px 7px;
 
     display: inline-flex;
@@ -81,5 +82,27 @@
 }
 
 .editable:focus {
+    background: var(--color-accent-soft);
+}
+
+.entry-content.editable {
+    margin: -3px -6px;
+    padding: 3px 6px;
+
+    border-radius: 6px;
+    cursor: text;
+
+    transition: background-color 120ms ease;
+}
+
+.entry-content.editable:hover {
+    background: color-mix(
+        in srgb,
+        var(--color-accent) 5%,
+        transparent
+    );
+}
+
+.entry-content.editable:focus {
     background: var(--color-accent-soft);
 }
