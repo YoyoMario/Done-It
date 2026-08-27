@@ -6,20 +6,26 @@
 .inline-task {
     max-width: 100%;
     min-height: 18px;
-    padding: 0 3px;
+    padding: 0 4px;
 
     display: inline-flex;
     align-items: center;
     gap: 4px;
     vertical-align: baseline;
 
-    background: transparent;
+    background: color-mix(
+    in srgb,
+    var(--color-accent) 6%,
+    transparent);
+	
     border: 0;
     border-radius: 4px;
     color: var(--color-text-primary);
 
     cursor: pointer;
     user-select: none;
+	
+	font-weight: 500;
 }
 
 .inline-task:hover {
@@ -49,8 +55,21 @@
 }
 
 .inline-task.is-complete {
+    background: color-mix(
+        in srgb,
+        var(--color-success) 8%,
+        transparent
+    );
     color: var(--color-text-muted);
     text-decoration: line-through;
+}
+
+.inline-task.is-complete:hover {
+    background: color-mix(
+        in srgb,
+        var(--color-success) 14%,
+        transparent
+    );
 }
 
 .inline-task.is-complete .inline-task-check {
