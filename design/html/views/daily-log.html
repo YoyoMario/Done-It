@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>to.do - Daily Log</title>
+
+    <link rel="stylesheet" href="../../css/app.css">
+</head>
+
+<body>
+
+    <!--
+        Static prototype for the future DailyLog.razor page.
+        Each .log-group section will later become a LogGroup component.
+    -->
+    <main class="daily-log">
+
+        <header class="daily-log-header">
+            <div class="daily-log-heading">
+                <h1 class="daily-log-title">Daily Log</h1>
+                <p class="daily-log-date">
+                    <time datetime="2026-08-27">Thursday, August 27, 2026</time>
+                </p>
+            </div>
+
+            <div class="daily-log-actions" aria-label="Daily log actions">
+                <!-- View-level controls will be added here. -->
+            </div>
+        </header>
+
+        <div class="daily-log-groups">
+
+            <section class="log-group">
+                <header class="group-header">
+                    <div class="group-title">
+                        <span class="group-dot group-dot-project"></span>
+                        <h2 class="editable editable-title" contenteditable="true" spellcheck="false">
+                            Project X
+                        </h2>
+                    </div>
+
+                    <div class="group-actions">
+                        <button class="group-menu" type="button" aria-label="Project X options">•••</button>
+                    </div>
+                </header>
+
+                <div class="group-entry-list">
+                    <article class="group-entry">
+                        <input class="entry-time" type="time" value="09:15" aria-label="Entry time">
+
+                        <div
+                            class="entry-content editable"
+                            contenteditable="true"
+                            role="textbox"
+                            aria-multiline="true"
+                            spellcheck="true">
+                            Reviewed the authentication flow with <span class="mention">@John</span>.<br>
+                            The SSO changes are ready for implementation.
+                        </div>
+                    </article>
+
+                    <article class="group-entry empty-entry">
+                        <input class="entry-time" type="time" value="10:30" aria-label="Entry time">
+                        <div class="entry-content empty-entry-input editable is-empty"
+                             contenteditable="true"
+                             role="textbox"
+                             aria-multiline="true"
+                             spellcheck="true"></div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="log-group">
+                <header class="group-header">
+                    <div class="group-title">
+                        <span class="group-dot group-dot-personal"></span>
+                        <h2 class="editable editable-title" contenteditable="true" spellcheck="false">
+                            Personal
+                        </h2>
+                    </div>
+
+                    <div class="group-actions">
+                        <button class="group-menu" type="button" aria-label="Personal options">•••</button>
+                    </div>
+                </header>
+
+                <div class="group-entry-list">
+                    <article class="group-entry">
+                        <input class="entry-time" type="time" value="12:45" aria-label="Entry time">
+
+                        <div
+                            class="entry-content editable"
+                            contenteditable="true"
+                            role="textbox"
+                            aria-multiline="true"
+                            spellcheck="true">
+                            Took a walk and planned the rest of the week.
+                        </div>
+                    </article>
+
+                    <article class="group-entry empty-entry">
+                        <input class="entry-time" type="time" value="14:00" aria-label="Entry time">
+                        <div class="entry-content empty-entry-input editable is-empty"
+                             contenteditable="true"
+                             role="textbox"
+                             aria-multiline="true"
+                             spellcheck="true"></div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="log-group">
+                <header class="group-header">
+                    <div class="group-title">
+                        <span class="group-dot group-dot-learning"></span>
+                        <h2 class="editable editable-title" contenteditable="true" spellcheck="false">
+                            Learning
+                        </h2>
+                    </div>
+
+                    <div class="group-actions">
+                        <button class="group-menu" type="button" aria-label="Learning options">•••</button>
+                    </div>
+                </header>
+
+                <div class="group-entry-list">
+                    <article class="group-entry">
+                        <input class="entry-time" type="time" value="16:20" aria-label="Entry time">
+
+                        <div
+                            class="entry-content editable"
+                            contenteditable="true"
+                            role="textbox"
+                            aria-multiline="true"
+                            spellcheck="true">
+                            Studied Razor component composition and page routing.<br>
+                            <span class="tag">#blazor</span>
+                        </div>
+                    </article>
+
+                    <article class="group-entry empty-entry">
+                        <input class="entry-time" type="time" value="17:30" aria-label="Entry time">
+                        <div class="entry-content empty-entry-input editable is-empty"
+                             contenteditable="true"
+                             role="textbox"
+                             aria-multiline="true"
+                             spellcheck="true"></div>
+                    </article>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+</body>
+</html>

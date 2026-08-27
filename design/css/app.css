@@ -1,0 +1,74 @@
+/* ============================================================
+   THEME COMPONENTS
+   ============================================================ */
+@import url("./themes/light.css");
+
+/* ============================================================
+   REUSABLE COMPONENTS
+   ============================================================ */
+@import url("./components/app-colors.css");
+@import url("./components/log-group.css");
+@import url("./components/entry.css");
+@import url("./components/tags.css");
+@import url("./components/sync-status.css");
+
+/* ============================================================
+   VIEWS
+   ============================================================ */
+@import url("./views/daily-log.css");
+/* Enable when css/views/task-list.css is created.
+@import url("./views/task-list.css");
+*/
+
+/* ============================================================
+   GLOBAL RESET / BASE
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    background: var(--color-page-bg);
+    color: var(--color-text-primary);
+
+    font-family:
+        Inter,
+        ui-sans-serif,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    color: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+[contenteditable="true"] {
+    outline: none;
+}
