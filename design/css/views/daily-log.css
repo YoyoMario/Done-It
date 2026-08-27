@@ -55,17 +55,29 @@
 }
 
 .daily-log-groups {
+    --daily-log-row-gap: clamp(16px, 2vw, 24px);
+
     min-width: 0;
 
     display: grid;
     grid-template-columns: repeat(3, minmax(320px, 1fr));
     align-items: start;
-    gap: clamp(16px, 2vw, 24px);
+    gap: var(--daily-log-row-gap);
+}
+
+.daily-log-groups.is-masonry {
+    grid-auto-rows: 1px;
+    column-gap: var(--daily-log-row-gap);
+    row-gap: 0;
 }
 
 .daily-log-groups > .log-group {
     width: 100%;
     max-width: none;
+}
+
+.daily-log-groups.is-masonry > .log-group {
+    align-self: start;
 }
 
 .daily-log-empty {
