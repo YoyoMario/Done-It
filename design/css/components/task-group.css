@@ -16,4 +16,5 @@
 .task-group-count { color: var(--color-text-muted); font-size: 12px; }
 .task-group-menu { padding: 5px 7px; border: 0; border-radius: 7px; background: transparent; color: var(--color-text-muted); cursor: pointer; }
 .task-group-menu:hover { background: var(--color-surface-hover); color: var(--color-text-primary); }
-.task-group-list { display: grid; gap: 2px; }
+.task-group-list { display: grid; }
+.task-group-list .task-entry + .task-entry { border-top: 1px solid var(--color-divider); }

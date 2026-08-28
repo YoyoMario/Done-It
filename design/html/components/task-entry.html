@@ -9,22 +9,15 @@
 <body class="task-entry-preview">
 
 <!-- Static prototype for the future TaskEntry.razor component. -->
-<button class="task-entry is-selected" type="button" aria-pressed="true">
-    <span class="task-entry-check" aria-hidden="true"></span>
-    <span class="task-entry-content">
+<div class="task-entry-table-preview">
+    <button class="task-entry task-entry-columns is-selected" type="button" aria-pressed="true">
+        <span class="task-entry-status">In progress</span>
         <span class="task-entry-name">Implement SSO callback</span>
-        <span class="task-entry-meta">
-            <span class="task-entry-date">Today</span>
-            <span class="task-entry-tag">#backend</span>
-            <span class="task-entry-comments">3 comments</span>
-        </span>
-    </span>
-    <span class="task-entry-assignees" aria-label="Assigned to John and Sara">
-        <span class="task-avatar">J</span>
-        <span class="task-avatar">S</span>
-    </span>
-    <span class="task-entry-status">In progress</span>
-</button>
+        <span class="task-entry-added">Aug 27, 2026</span>
+        <span class="task-entry-comments">3 comments</span>
+        <span class="task-entry-tags"><span class="task-entry-tag">#backend</span></span>
+    </button>
+</div>
 
 </body>
 </html>
