@@ -1,12 +1,12 @@
 /* Done It — Task List View */
-.task-list-page { width: min(100%, 1440px); margin-inline: auto; padding: clamp(24px, 4vw, 56px); }
+.task-list-page { width: min(100%, 1440px); margin-inline: auto; padding: clamp(24px, 4vw, 56px); overflow-x: auto; }
 .task-list-header { margin-bottom: 26px; display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; }
 .task-list-title { margin: 0; font-size: clamp(24px, 3vw, 34px); line-height: 1.15; letter-spacing: -0.025em; }
 .task-list-subtitle { margin: 7px 0 0; color: var(--color-text-secondary); }
 .task-list-add { padding: 9px 13px; border: 0; border-radius: 9px; background: var(--color-accent); color: white; font-weight: 600; cursor: pointer; }
 .task-list-add:hover { background: var(--color-accent-hover); }
-.task-list-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(310px, 390px); align-items: start; gap: clamp(18px, 2.5vw, 30px); }
-.task-list-groups { min-width: 0; display: grid; gap: 16px; }
+.task-list-layout { min-width: 558px; display: grid; grid-template-columns: minmax(280px, 1fr) minmax(260px, 390px); align-items: start; gap: clamp(18px, 2.5vw, 30px); }
+.task-list-groups { min-width: 0; display: grid; gap: 16px; container-type: inline-size; }
 .task-list-column-header {
     padding-inline: 21px;
     color: var(--color-text-muted);
@@ -19,5 +19,27 @@
     color: inherit;
     font-size: inherit;
 }
-@media (max-width: 1080px) { .task-list-layout { grid-template-columns: 1fr; } .task-details { position: static; } }
+@container (max-width: 700px) {
+    .task-entry-columns,
+    .task-entry.task-entry-columns {
+        grid-template-columns: 100px minmax(190px, 1fr) 120px;
+    }
+
+    .task-entry-added,
+    .task-entry-comments {
+        display: none;
+    }
+}
+
+@container (max-width: 430px) {
+    .task-entry-columns,
+    .task-entry.task-entry-columns {
+        grid-template-columns: 92px minmax(150px, 1fr);
+    }
+
+    .task-entry-tags {
+        display: none;
+    }
+}
+
 @media (max-width: 520px) { .task-list-page { padding: 20px; } .task-list-header { align-items: flex-start; } }
