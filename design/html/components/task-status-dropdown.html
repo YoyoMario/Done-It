@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Done It - Task Status Dropdown Component</title>
+    <link rel="stylesheet" href="../../css/app.css">
+</head>
+<body class="task-status-dropdown-preview">
+
+<!-- Static prototype for the future TaskStatusDropdown.razor component. -->
+<details class="task-status-dropdown" open>
+    <summary class="task-status-trigger task-status-progress">
+        <span class="task-status-dot" aria-hidden="true"></span>
+        <span class="task-status-label">In progress</span>
+        <span class="task-status-chevron" aria-hidden="true"></span>
+    </summary>
+
+    <div class="task-status-menu" role="listbox" aria-label="Task status">
+        <button class="task-status-option task-status-todo" type="button" role="option" aria-selected="false">
+            <span class="task-status-dot" aria-hidden="true"></span><span>To do</span>
+        </button>
+        <button class="task-status-option task-status-progress is-selected" type="button" role="option" aria-selected="true">
+            <span class="task-status-dot" aria-hidden="true"></span><span>In progress</span><span class="task-status-selected" aria-hidden="true">✓</span>
+        </button>
+        <button class="task-status-option task-status-hold" type="button" role="option" aria-selected="false">
+            <span class="task-status-dot" aria-hidden="true"></span><span>On hold</span>
+        </button>
+        <button class="task-status-option task-status-for-test" type="button" role="option" aria-selected="false">
+            <span class="task-status-dot" aria-hidden="true"></span><span>For test</span>
+        </button>
+        <button class="task-status-option task-status-in-test" type="button" role="option" aria-selected="false">
+            <span class="task-status-dot" aria-hidden="true"></span><span>In test</span>
+        </button>
+        <button class="task-status-option task-status-issues" type="button" role="option" aria-selected="false">
+            <span class="task-status-dot" aria-hidden="true"></span><span>Has issues</span>
+        </button>
+        <button class="task-status-option task-status-completed" type="button" role="option" aria-selected="false">
+            <span class="task-status-dot" aria-hidden="true"></span><span>Completed</span>
+        </button>
+    </div>
+</details>
+
+</body>
+</html>

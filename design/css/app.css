@@ -12,7 +12,8 @@
 @import url("./components/task.css");
 @import url("./components/task-entry.css");
 @import url("./components/task-group.css");
-@import url("./components/task-description.css");
+@import url("./components/task-details.css");
+@import url("./components/task-status-dropdown.css");
 @import url("./components/sync-status.css");
 @import url("./components/navigation.css");
 

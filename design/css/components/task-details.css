@@ -1,0 +1,31 @@
+/* Done It — Selected Task Details Component */
+.task-details {
+    position: sticky;
+    top: 24px;
+    padding: 22px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    box-shadow: var(--shadow-log-group);
+}
+.task-details-header { display: flex; align-items: center; justify-content: space-between; }
+.task-details-eyebrow { color: var(--color-accent); font-size: 12px; font-weight: 700; }
+.task-details-close { width: 30px; height: 30px; border: 0; border-radius: 8px; background: transparent; color: var(--color-text-muted); font-size: 20px; cursor: pointer; }
+.task-details-close:hover { background: var(--color-surface-hover); color: var(--color-text-primary); }
+.task-details-title-row { margin-top: 20px; }
+.task-details-title { margin: -2px 0 0; font-size: 21px; line-height: 1.3; }
+.task-details-properties { margin: 24px 0 0; display: grid; gap: 12px; }
+.task-details-properties > div { display: grid; grid-template-columns: 72px minmax(0, 1fr); align-items: center; gap: 10px; }
+.task-details-properties dt { color: var(--color-text-muted); font-size: 12px; }
+.task-details-properties dd { margin: 0; color: var(--color-text-secondary); font-size: 13px; }
+.task-details-properties .task-person { margin-right: 3px; vertical-align: middle; }
+.task-details-section { margin-top: 25px; padding-top: 20px; border-top: 1px solid var(--color-divider); }
+.task-details-section h3 { margin: 0 0 11px; font-size: 13px; }
+.task-details-section h3 span { color: var(--color-text-muted); font-weight: 500; }
+.task-details-section > p { margin: 0; color: var(--color-text-secondary); font-size: 13px; line-height: 1.6; }
+.task-comment { display: grid; grid-template-columns: 27px minmax(0, 1fr); gap: 9px; margin-top: 14px; }
+.task-comment p { margin: 0; color: var(--color-text-secondary); font-size: 12px; line-height: 1.5; }
+.task-comment p strong { color: var(--color-text-primary); }
+.task-comment-compose { margin-top: 18px; display: grid; grid-template-columns: 27px minmax(0, 1fr); gap: 9px; }
+.task-comment-compose textarea { width: 100%; resize: vertical; padding: 9px 10px; border: 1px solid var(--color-border); border-radius: 8px; color: var(--color-text-primary); }
+.task-comment-compose textarea:focus { border-color: var(--color-accent); outline: 0; box-shadow: 0 0 0 3px var(--color-accent-soft); }

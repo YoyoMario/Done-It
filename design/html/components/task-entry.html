@@ -10,13 +10,24 @@
 
 <!-- Static prototype for the future TaskEntry.razor component. -->
 <div class="task-entry-table-preview">
-    <button class="task-entry task-entry-columns is-selected" type="button" aria-pressed="true">
-        <span class="task-entry-status">In progress</span>
+    <div class="task-entry task-entry-columns">
+        <details class="task-status-dropdown task-status-dropdown-compact">
+            <summary class="task-status-trigger task-status-progress"><span class="task-status-dot"></span><span class="task-status-label">In progress</span><span class="task-status-chevron"></span></summary>
+            <div class="task-status-menu" role="listbox" aria-label="Task status">
+                <button class="task-status-option task-status-todo" type="button"><span class="task-status-dot"></span><span>To do</span></button>
+                <button class="task-status-option task-status-progress is-selected" type="button"><span class="task-status-dot"></span><span>In progress</span><span class="task-status-selected">✓</span></button>
+                <button class="task-status-option task-status-hold" type="button"><span class="task-status-dot"></span><span>On hold</span></button>
+                <button class="task-status-option task-status-for-test" type="button"><span class="task-status-dot"></span><span>For test</span></button>
+                <button class="task-status-option task-status-in-test" type="button"><span class="task-status-dot"></span><span>In test</span></button>
+                <button class="task-status-option task-status-issues" type="button"><span class="task-status-dot"></span><span>Has issues</span></button>
+                <button class="task-status-option task-status-completed" type="button"><span class="task-status-dot"></span><span>Completed</span></button>
+            </div>
+        </details>
         <span class="task-entry-name">Implement SSO callback</span>
         <span class="task-entry-added">Aug 27, 2026</span>
         <span class="task-entry-comments">3 comments</span>
         <span class="task-entry-tags"><span class="task-entry-tag">#backend</span></span>
-    </button>
+    </div>
 </div>
 
 </body>

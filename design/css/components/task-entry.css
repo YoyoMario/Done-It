@@ -1,7 +1,7 @@
 /* Done It — Full Task Row Component */
 .task-entry-preview,
 .task-group-preview,
-.task-description-preview {
+.task-details-preview {
     padding: clamp(24px, 6vw, 72px);
 }
 
@@ -43,7 +43,7 @@
     justify-self: start;
 }
 
-.task-description-preview .task-description {
+.task-details-preview .task-details {
     max-width: 390px;
     margin-inline: auto;
 }
@@ -61,21 +61,11 @@
     border-radius: 9px;
     color: var(--color-text-primary);
     text-align: left;
-    cursor: pointer;
+    cursor: default;
 }
 
 .task-entry:hover { background: var(--color-surface-hover); }
-.task-entry.is-selected { background: var(--color-accent-soft); }
 .task-entry:focus-visible { outline: 2px solid var(--color-accent); outline-offset: -2px; }
-
-.task-entry-check,
-.task-description-check {
-    width: 17px;
-    height: 17px;
-    border: 1.5px solid var(--color-text-muted);
-    border-radius: 5px;
-    background: var(--color-surface);
-}
 
 .task-entry-name { min-width: 190px; overflow: hidden; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
 .task-entry-meta { display: flex; gap: 9px; overflow: hidden; color: var(--color-text-muted); font-size: 12px; white-space: nowrap; }
@@ -117,8 +107,6 @@
     color: var(--color-text-secondary);
 }
 
-.task-entry.is-complete .task-entry-check { background: var(--color-success); border-color: var(--color-success); }
-.task-entry.is-complete .task-entry-check::after { content: "✓"; display: block; color: white; font-size: 11px; text-align: center; }
 .task-entry.is-complete .task-entry-name { color: var(--color-text-muted); text-decoration: line-through; }
 .task-entry.is-complete .task-entry-status { background: color-mix(in srgb, var(--color-success) 12%, transparent); color: var(--color-success); }
 
