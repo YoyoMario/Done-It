@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Done It - Tasks</title>
+    <link rel="stylesheet" href="../../css/app.css">
+</head>
+<body>
+    <main class="task-list-page">
+        <header class="task-list-header">
+            <div>
+                <h1 class="task-list-title">Tasks</h1>
+                <p class="task-list-subtitle">Everything that needs your attention, grouped by project.</p>
+            </div>
+            <button class="task-list-add" type="button">+ New task</button>
+        </header>
+
+        <div class="task-list-layout">
+            <div class="task-list-groups">
+                <section class="task-group">
+                    <header class="task-group-header"><div class="task-group-heading"><span class="task-group-dot"></span><h2 class="task-group-title">Project X</h2><span class="task-group-count">3</span></div><button class="task-group-menu" type="button">•••</button></header>
+                    <div class="task-group-list">
+                        <button class="task-entry is-selected" type="button"><span class="task-entry-check"></span><span class="task-entry-content"><span class="task-entry-name">Implement SSO callback</span><span class="task-entry-meta"><span class="task-entry-date">Today</span><span class="task-entry-tag">#backend</span><span>3 comments</span></span></span><span class="task-entry-assignees"><span class="task-avatar">J</span><span class="task-avatar">S</span></span><span class="task-entry-status">In progress</span></button>
+                        <button class="task-entry" type="button"><span class="task-entry-check"></span><span class="task-entry-content"><span class="task-entry-name">Review navigation keyboard states</span><span class="task-entry-meta"><span>Tomorrow</span><span class="task-entry-tag">#frontend</span></span></span><span class="task-entry-assignees"><span class="task-avatar">S</span></span><span class="task-entry-status">To do</span></button>
+                        <button class="task-entry is-complete" type="button"><span class="task-entry-check"></span><span class="task-entry-content"><span class="task-entry-name">Verify mobile navigation</span><span class="task-entry-meta"><span>Completed today</span></span></span><span class="task-entry-assignees"><span class="task-avatar">M</span></span><span class="task-entry-status">Done</span></button>
+                    </div>
+                </section>
+
+                <section class="task-group">
+                    <header class="task-group-header"><div class="task-group-heading"><span class="task-group-dot task-group-dot-personal"></span><h2 class="task-group-title">Personal</h2><span class="task-group-count">2</span></div><button class="task-group-menu" type="button">•••</button></header>
+                    <div class="task-group-list">
+                        <button class="task-entry" type="button"><span class="task-entry-check"></span><span class="task-entry-content"><span class="task-entry-name">Pick up a larger planter</span><span class="task-entry-meta"><span>Saturday</span><span class="task-entry-tag">#home</span></span></span><span class="task-entry-assignees"><span class="task-avatar">M</span></span><span class="task-entry-status">To do</span></button>
+                        <button class="task-entry" type="button"><span class="task-entry-check"></span><span class="task-entry-content"><span class="task-entry-name">Plan next week’s meals</span><span class="task-entry-meta"><span>No due date</span></span></span><span class="task-entry-assignees"><span class="task-avatar">M</span></span><span class="task-entry-status">To do</span></button>
+                    </div>
+                </section>
+
+                <section class="task-group">
+                    <header class="task-group-header"><div class="task-group-heading"><span class="task-group-dot task-group-dot-learning"></span><h2 class="task-group-title">Learning</h2><span class="task-group-count">2</span></div><button class="task-group-menu" type="button">•••</button></header>
+                    <div class="task-group-list">
+                        <button class="task-entry" type="button"><span class="task-entry-check"></span><span class="task-entry-content"><span class="task-entry-name">Build a responsive container-query experiment</span><span class="task-entry-meta"><span>Friday</span><span class="task-entry-tag">#css</span></span></span><span class="task-entry-assignees"><span class="task-avatar">M</span></span><span class="task-entry-status">In progress</span></button>
+                        <button class="task-entry is-complete" type="button"><span class="task-entry-check"></span><span class="task-entry-content"><span class="task-entry-name">Read Razor component lifecycle notes</span><span class="task-entry-meta"><span>Completed yesterday</span><span class="task-entry-tag">#blazor</span></span></span><span class="task-entry-assignees"><span class="task-avatar">M</span></span><span class="task-entry-status">Done</span></button>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="task-description" aria-label="Selected task description">
+                <header class="task-description-header"><span class="task-description-eyebrow">Project X</span><button class="task-description-close" type="button" aria-label="Close task description">×</button></header>
+                <div class="task-description-title-row"><button class="task-description-check" type="button" aria-label="Mark task complete"></button><h2 class="task-description-title">Implement SSO callback</h2></div>
+                <dl class="task-description-properties">
+                    <div><dt>Status</dt><dd><span class="task-status">In progress</span></dd></div>
+                    <div><dt>Due</dt><dd>Today, 17:00</dd></div>
+                    <div><dt>Tagged</dt><dd><span class="task-person">J</span> John&nbsp; <span class="task-person">S</span> Sara</dd></div>
+                </dl>
+                <section class="task-description-section"><h3>Description</h3><p>Connect the authentication callback, validate the returned state and store the active session.</p></section>
+                <section class="task-description-section">
+                    <h3>Comments <span>3</span></h3>
+                    <div class="task-comment"><span class="task-person">S</span><p><strong>Sara</strong><br>Redirect handling is ready for review.</p></div>
+                    <div class="task-comment"><span class="task-person">J</span><p><strong>John</strong><br>I’ll check the expired-session case today.</p></div>
+                    <label class="task-comment-compose"><span class="task-person">M</span><textarea rows="2" placeholder="Write a comment…" aria-label="New comment"></textarea></label>
+                </section>
+            </aside>
+        </div>
+    </main>
+</body>
+</html>

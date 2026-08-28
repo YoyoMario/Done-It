@@ -10,6 +10,9 @@
 @import url("./components/entry.css");
 @import url("./components/tags.css");
 @import url("./components/task.css");
+@import url("./components/task-entry.css");
+@import url("./components/task-group.css");
+@import url("./components/task-description.css");
 @import url("./components/sync-status.css");
 @import url("./components/navigation.css");
 
@@ -17,9 +20,7 @@
    VIEWS
    ============================================================ */
 @import url("./views/daily-log.css");
-/* Enable when css/views/task-list.css is created.
 @import url("./views/task-list.css");
-*/
 
 /* ============================================================
    GLOBAL RESET / BASE
