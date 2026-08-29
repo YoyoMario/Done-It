@@ -1,0 +1,20 @@
+/* Done It — Task Group Component */
+.task-group {
+    padding: 9px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+}
+
+.task-group-header { min-height: 44px; padding: 0 8px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.task-group-heading { min-width: 0; display: flex; align-items: center; gap: 9px; }
+.task-group-dot { width: 8px; height: 8px; flex: 0 0 8px; border-radius: 50%; background: var(--color-accent); }
+.task-group-dot-personal { background: var(--color-personal); }
+.task-group-dot-learning { background: var(--color-learning); }
+.task-group-dot-ideas { background: var(--color-ideas); }
+.task-group-title { margin: 0; font-size: 14px; font-weight: 700; }
+.task-group-count { color: var(--color-text-muted); font-size: 12px; }
+.task-group-menu { padding: 5px 7px; border: 0; border-radius: 7px; background: transparent; color: var(--color-text-muted); cursor: pointer; }
+.task-group-menu:hover { background: var(--color-surface-hover); color: var(--color-text-primary); }
+.task-group-list { display: grid; }
+.task-group-list .task-entry + .task-entry { border-top: 1px solid var(--color-divider); }

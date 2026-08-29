@@ -1,0 +1,182 @@
+/* ============================================================
+   Done It — Task Status Dropdown Component
+   ============================================================ */
+
+.task-status-dropdown-preview {
+    padding: clamp(40px, 8vw, 96px);
+}
+
+.task-status-dropdown-preview .task-status-dropdown {
+    margin-inline: auto;
+}
+
+.task-status-dropdown {
+    --task-status-color: var(--color-text-muted);
+
+    position: relative;
+    width: 148px;
+    color: var(--color-text-primary);
+}
+
+.task-status-dropdown > summary {
+    list-style: none;
+}
+
+.task-status-dropdown > summary::-webkit-details-marker {
+    display: none;
+}
+
+.task-status-trigger {
+    position: relative;
+    min-height: 32px;
+    padding: 5px 24px 5px 9px;
+    display: grid;
+    grid-template-columns: 7px minmax(0, 1fr);
+    align-items: center;
+    gap: 7px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-surface);
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+
+.task-status-trigger:hover,
+.task-status-dropdown[open] .task-status-trigger {
+    border-color: color-mix(in srgb, var(--task-status-color) 45%, var(--color-border));
+    background: color-mix(in srgb, var(--task-status-color) 7%, var(--color-surface));
+    color: var(--color-text-primary);
+}
+
+.task-status-trigger:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+.task-status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--task-status-color);
+}
+
+.task-status-chevron {
+    position: absolute;
+    right: 10px;
+    width: 6px;
+    height: 6px;
+    opacity: 0;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+    transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.task-status-trigger:hover .task-status-chevron,
+.task-status-trigger:focus-visible .task-status-chevron {
+    opacity: 1;
+}
+
+.task-status-dropdown[open] .task-status-chevron {
+    transform: translateY(2px) rotate(225deg);
+}
+
+.task-status-menu {
+    position: absolute;
+    z-index: 20;
+    top: calc(100% + 6px);
+    left: 0;
+    width: 180px;
+    padding: 5px;
+    display: grid;
+    gap: 2px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    box-shadow: var(--shadow-log-group);
+}
+
+.task-status-option {
+    --task-status-color: var(--color-text-muted);
+
+    width: 100%;
+    min-height: 34px;
+    padding: 6px 8px;
+    display: grid;
+    grid-template-columns: 7px minmax(0, 1fr) 14px;
+    align-items: center;
+    gap: 8px;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.task-status-option::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--task-status-color);
+}
+
+.task-status-option > .task-status-dot {
+    display: none;
+}
+
+.task-status-option:hover,
+.task-status-option.is-selected {
+    background: color-mix(in srgb, var(--task-status-color) 9%, transparent);
+    color: var(--color-text-primary);
+}
+
+.task-status-option:focus-visible {
+    outline: 2px solid var(--task-status-color);
+    outline-offset: -2px;
+}
+
+.task-status-selected {
+    color: var(--task-status-color);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.task-status-todo { --task-status-color: var(--color-text-muted); }
+.task-status-progress { --task-status-color: var(--color-accent); }
+.task-status-hold { --task-status-color: var(--color-warning); }
+.task-status-for-test { --task-status-color: color-mix(in srgb, var(--color-accent) 55%, var(--color-error)); }
+.task-status-in-test { --task-status-color: var(--color-learning); }
+.task-status-issues { --task-status-color: var(--color-error); }
+.task-status-completed { --task-status-color: var(--color-success); }
+
+/* Compact variant used inside task rows. */
+.task-status-dropdown-compact {
+    width: 100px;
+}
+
+.task-status-dropdown-compact .task-status-trigger {
+    min-height: 24px;
+    padding: 3px 20px 3px 8px;
+    border: 0;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--task-status-color) 12%, transparent);
+    color: var(--task-status-color);
+    font-size: 11px;
+}
+
+.task-status-dropdown-compact .task-status-trigger:hover,
+.task-status-dropdown-compact[open] .task-status-trigger {
+    border-color: transparent;
+    background: color-mix(in srgb, var(--task-status-color) 18%, transparent);
+    color: var(--task-status-color);
+}
+
+.task-status-dropdown-compact .task-status-menu {
+    top: calc(100% + 5px);
+}

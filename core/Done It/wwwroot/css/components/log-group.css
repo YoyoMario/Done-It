@@ -1,0 +1,214 @@
+/* ============================================================
+   to.do — Log Group Component
+   File: css/components/log-group.css
+
+   Component structure only.
+   Theme colors should come from the active theme file.
+   ============================================================ */
+
+
+/* ============================================================
+   LOG GROUP
+   ============================================================ */
+
+.log-group {
+    width: min(100%, 390px);
+    min-width: 0;
+    height: fit-content;
+
+    padding: var(--space-log-group, 20px);
+
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-log-group, 10px);
+
+    box-shadow: var(
+        --shadow-log-group,
+        0 8px 26px rgba(0, 0, 0, 0.08)
+    );
+
+    transition:
+        background-color 120ms ease,
+        border-color 120ms ease,
+        box-shadow 120ms ease;
+}
+
+.log-group:hover {
+    background: var(--color-surface-hover, var(--color-surface));
+    border-color: var(--color-border-hover, var(--color-border));
+
+    box-shadow: var(
+        --shadow-log-group-hover,
+        var(--shadow-log-group)
+    );
+}
+
+
+/* ============================================================
+   GROUP HEADER
+   ============================================================ */
+
+.group-header {
+    min-height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid var(--color-divider);
+}
+
+.group-title {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.group-title h2 {
+    margin: 0;
+
+    overflow: hidden;
+
+    color: var(--color-text-primary);
+
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.group-dot {
+    width: 9px;
+    height: 9px;
+    flex: 0 0 9px;
+
+    display: inline-block;
+
+    border-radius: 50%;
+}
+
+.group-dot-project {
+    background: var(--color-project);
+}
+
+.group-dot-personal {
+    background: var(--color-personal);
+}
+
+.group-dot-learning {
+    background: var(--color-learning);
+}
+
+.group-dot-ideas {
+    background: var(--color-ideas);
+}
+
+
+/* ============================================================
+   GROUP ACTIONS
+   ============================================================ */
+
+.group-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.group-menu {
+    border: 0;
+    padding: 0;
+
+    background: transparent;
+    color: var(--color-text-muted);
+
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+}
+
+.group-menu:hover {
+    color: var(--color-text-primary);
+}
+
+
+/* ============================================================
+   ENTRY LIST
+   ============================================================ */
+
+.group-entry-list {
+    min-width: 0;
+}
+
+.group-entry {
+    padding: 18px 0 17px;
+
+    border-bottom: 1px solid var(--color-divider);
+}
+
+.group-entry:last-of-type {
+    border-bottom: none;
+    padding-bottom: 4px;
+}
+
+
+/* ============================================================
+   ENTRY CONTENT
+   ============================================================ */
+
+.entry-content {
+    color: var(--color-text-primary);
+
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.entry-content p {
+    margin: 0 0 2px;
+}
+
+.mention {
+    color: var(--color-mention, var(--color-accent));
+}
+
+
+/* ============================================================
+   EMPTY ENTRY
+   ============================================================ */
+
+.empty-entry-input {
+    min-height: 1px;
+
+    color: var(--color-text-primary);
+
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.empty-entry-input.is-empty::before {
+    content: "Start typing...";
+
+    color: var(--color-text-muted);
+    opacity: 0.62;
+
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 520px) {
+    .log-group {
+        width: 100%;
+    }
+}

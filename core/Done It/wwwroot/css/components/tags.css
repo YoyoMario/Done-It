@@ -1,0 +1,8 @@
+.tag {
+    background: var(--color-accent-soft);
+    color: var(--color-accent);
+}
+
+.tag-danger {
+    color: var(--color-error);
+}
