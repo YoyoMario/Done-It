@@ -1,4 +1,4 @@
-using Done_It.Components;
+using DoneIt.Web.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
