@@ -1,6 +1,6 @@
 ﻿namespace DoneIt.DailyLogs.Data
 {
-    public class DailyLog
+    public class DailyLogEntry
     {
         private Guid _guid = default;
         private Guid _ownerGuid = default;
@@ -12,7 +12,7 @@
         public DateOnly Date => _date;
         public List<LogGroupEntry> DailyLogGroups => _dailyLogGroups;
 
-        public DailyLog(Guid guid, Guid ownerGuid, DateOnly date, List<LogGroupEntry> dailyLogGroups)
+        public DailyLogEntry(Guid guid, Guid ownerGuid, DateOnly date, List<LogGroupEntry> dailyLogGroups)
         {
             _guid = guid;
             _ownerGuid = ownerGuid;
