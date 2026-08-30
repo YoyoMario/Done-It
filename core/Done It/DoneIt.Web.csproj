@@ -17,4 +17,9 @@
     <Folder Include="wwwroot\js\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DoneIt.DailyLogs.Mock\DoneIt.DailyLogs.Mock.csproj" />
+    <ProjectReference Include="..\DoneIt.DailyLogs\DoneIt.DailyLogs.csproj" />
+  </ItemGroup>
+
 </Project>
