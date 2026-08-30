@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="Done It/DoneIt.Web.csproj" />
+  <Project Path="DoneIt.DailyLogs.Mock/DoneIt.DailyLogs.Mock.csproj" Id="c4be2dcb-28fb-4986-891d-70af150cd50b" />
   <Project Path="DoneIt.DailyLogs/DoneIt.DailyLogs.csproj" Id="cf48ab62-cb36-4d48-b427-ba1139d55dc9" />
 </Solution>

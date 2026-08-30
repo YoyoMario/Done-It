@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DoneIt.DailyLogs\DoneIt.DailyLogs.csproj" />
+  </ItemGroup>
+
 </Project>
