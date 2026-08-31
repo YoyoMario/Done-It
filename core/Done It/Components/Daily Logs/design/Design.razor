@@ -1,0 +1,25 @@
+﻿@page "/design"
+@using DoneIt.DailyLogs.Data
+@using DoneIt.DailyLogs.Services
+
+<LogGroupComponentPreview TestDesign="TestDesign" LogGroupEntry="_logGroupEntry" />
+<DailyLogLayoutPreview TestDesign="@TestDesign" DailyLogEntry="@_dailyLogEntry" />
+
+@code
+{
+	public bool TestDesign = true;	
+
+	[Inject]
+	private IDailyLogGroupEntryService _dailyLogGroupService { get; set; } = default!;
+	[Inject]
+	private IDailyLogEntryService _dailyLogEntryService { get; set; } = default!;
+
+	private DailyLogEntry _dailyLogEntry = default!;
+	private LogGroupEntry _logGroupEntry = default!;
+
+	protected override async Task OnInitializedAsync()
+	{
+		_dailyLogEntry = await _dailyLogEntryService.GetAsync(new DateOnly(1995, 2, 7));
+		_logGroupEntry = await _dailyLogGroupService.GetAsync();
+	}
+}
