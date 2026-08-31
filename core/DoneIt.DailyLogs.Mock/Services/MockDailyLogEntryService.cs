@@ -79,6 +79,22 @@ namespace DoneIt.DailyLogs.Mock.Services
                                 date.ToDateTime(new TimeOnly(20, 45)),
                                 "Explore a focused view for the current group.")
                         }
+                    ),
+                    new LogGroupEntry(
+                        Guid.NewGuid(),
+                        "Ideas - Copy",
+                        new List<LogEntry>()
+                        {
+                            new LogEntry(
+                                Guid.NewGuid(),
+                                date.ToDateTime(new TimeOnly(18, 10)),
+                                "Generate a weekly reflection from completed logs."),
+
+                            new LogEntry(
+                                Guid.NewGuid(),
+                                date.ToDateTime(new TimeOnly(20, 45)),
+                                "Explore a focused view for the current group.")
+                        }
                     )
                 }
             );
