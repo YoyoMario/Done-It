@@ -1,14 +1,46 @@
-<header class="daily-log-header">
-    <div class="daily-log-heading">
-        <h1 class="daily-log-title">Daily Log</h1>
-        <p class="daily-log-date">
-            <time datetime="@(SelectedDate.ToString("yyyy-MM-dd"))">
-                @FormattedDate
-            </time>
-        </p>
+<section class="date-picker" aria-label="Choose daily log date">
+    <header class="date-picker-header">
+        <button class="date-picker-navigation"
+                type="button"
+                aria-label="Previous month"
+                @onclick="ShowPreviousMonth">
+            ‹
+        </button>
+
+        <h2 class="date-picker-month">@VisibleMonthLabel</h2>
+
+        <button class="date-picker-navigation"
+                type="button"
+                aria-label="Next month"
+                @onclick="ShowNextMonth">
+            ›
+        </button>
+    </header>
+
+    <div class="date-picker-weekdays" aria-hidden="true">
+        @foreach (string weekday in Weekdays)
+        {
+            <span>@weekday</span>
+        }
     </div>
 
-    <div class="daily-log-actions" aria-label="Daily log actions">
-        @* Date controls can be introduced here later. *@
+    <div class="date-picker-days">
+        @foreach (DateOnly? date in CalendarDays)
+        {
+            if (date is null)
+            {
+                <span class="date-picker-day-placeholder"></span>
+            }
+            else
+            {
+                <button class="@GetDayClass(date.Value)"
+                        type="button"
+                        aria-label="@date.Value.ToString("D")"
+                        aria-pressed="@(date.Value == CurrentSelection)"
+                        @onclick="() => SelectDateAsync(date.Value)">
+                    @date.Value.Day
+                </button>
+            }
+        }
     </div>
-</header>
+</section>
