@@ -1,13 +1,13 @@
 ﻿using DoneIt.DailyLogs.Data;
 using Microsoft.AspNetCore.Components;
 
-namespace DoneIt.Web.Components.Daily_Logs.design
+namespace DoneIt.Web.Components.DailyLogs
 {
-    public partial class DailyLogLayoutPreview
+    public partial class LogGroupLayout
     {
         [Parameter]
         public bool TestDesign { get; set; } = default!;
         [Parameter]
-        public DailyLogEntry DailyLogEntry { get; set; } = default!;
+        public LogGroupEntry LogGroupEntry { get; set; } = default!;
     }
 }

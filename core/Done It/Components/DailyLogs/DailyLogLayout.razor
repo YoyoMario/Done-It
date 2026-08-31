@@ -18,7 +18,7 @@
     <div class="daily-log-groups">
         @foreach(LogGroupEntry logGroupEntry in DailyLogEntry.DailyLogGroups)
         {
-            <LogGroupComponentPreview TestDesign="@TestDesign" LogGroupEntry="@logGroupEntry" />
+            <LogGroupLayout TestDesign="@TestDesign" LogGroupEntry="@logGroupEntry" />
         }       
     </div>
 </main>
