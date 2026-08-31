@@ -7,10 +7,28 @@
    ============================================================ */
 
 .daily-log {
-    width: min(100%, 1360px);
+    width: 100%;
     min-width: 0;
-    margin-inline: auto;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(260px, 22vw, 300px);
+    align-items: start;
+}
+
+.daily-log-main {
+    min-width: 0;
     padding: clamp(24px, 4vw, 56px);
+    container: daily-log-main / inline-size;
+}
+
+.daily-log-right-bar {
+    position: sticky;
+    top: 0;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 22px 16px;
+    background: var(--color-surface);
+    border-left: 1px solid var(--color-border);
 }
 
 .daily-log-groups {
@@ -48,24 +66,38 @@
     text-align: center;
 }
 
-@media (max-width: 1100px) {
+@container daily-log-main (max-width: 1039px) {
     .daily-log-groups {
         grid-template-columns: repeat(2, minmax(320px, 1fr));
     }
 }
 
-@media (max-width: 720px) {
-    .daily-log {
-        padding: 20px;
-    }
-
+@container daily-log-main (max-width: 679px) {
     .daily-log-groups {
         grid-template-columns: minmax(0, 1fr);
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 720px) {
     .daily-log {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .daily-log-main {
+        padding: 20px;
+    }
+
+    .daily-log-right-bar {
+        position: static;
+        grid-row: 1;
+        min-height: auto;
+        border-left: 0;
+        border-bottom: 1px solid var(--color-border);
+    }
+}
+
+@media (max-width: 420px) {
+    .daily-log-main {
         padding-inline: 14px;
     }
 }

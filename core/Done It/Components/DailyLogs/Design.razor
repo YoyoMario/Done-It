@@ -3,9 +3,14 @@
 @using DoneIt.DailyLogs.Services
 
 <main class="daily-log">
-	<LogGroupLayout TestDesign="TestDesign" LogGroupEntry="_logGroupEntry" />
-	<DatePickerLayout SelectedDate="@_dailyLogEntry.Date" />
-	<DailyLogLayout TestDesign="@TestDesign" DailyLogEntry="@_dailyLogEntry" />
+	<section class="daily-log-main" aria-label="Daily log entries">
+		<LogGroupLayout TestDesign="TestDesign" LogGroupEntry="_logGroupEntry" />
+		<DailyLogLayout TestDesign="@TestDesign" DailyLogEntry="@_dailyLogEntry" />
+	</section>
+
+	<aside class="daily-log-right-bar" aria-label="Daily log calendar">
+		<DatePickerLayout SelectedDate="@_dailyLogEntry.Date" />
+	</aside>
 </main>
 
 @code
