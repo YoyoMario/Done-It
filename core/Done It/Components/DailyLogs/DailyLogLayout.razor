@@ -1,24 +1,8 @@
 ﻿@using DoneIt.DailyLogs.Data
 
-<main class="daily-log">
-
-    <header class="daily-log-header">
-        <div class="daily-log-heading">
-            <h1 class="daily-log-title">Daily Log</h1>
-            <p class="daily-log-date">
-                <time datetime="2026-08-27">Thursday, August 27, 2026</time>
-            </p>
-        </div>
-
-        <div class="daily-log-actions" aria-label="Daily log actions">
-            <!-- View-level controls will be added here. -->
-        </div>
-    </header>
-
-    <div class="daily-log-groups">
-        @foreach(LogGroupEntry logGroupEntry in DailyLogEntry.DailyLogGroups)
-        {
-            <LogGroupLayout TestDesign="@TestDesign" LogGroupEntry="@logGroupEntry" />
-        }       
-    </div>
-</main>
+<div class="daily-log-groups">
+    @foreach (LogGroupEntry logGroupEntry in DailyLogEntry.DailyLogGroups)
+    {
+        <LogGroupLayout TestDesign="@TestDesign" LogGroupEntry="@logGroupEntry" />
+    }
+</div>

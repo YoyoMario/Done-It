@@ -2,8 +2,11 @@
 @using DoneIt.DailyLogs.Data
 @using DoneIt.DailyLogs.Services
 
-<LogGroupLayout TestDesign="TestDesign" LogGroupEntry="_logGroupEntry" />
-<DailyLogLayout TestDesign="@TestDesign" DailyLogEntry="@_dailyLogEntry" />
+<main class="daily-log">
+	<LogGroupLayout TestDesign="TestDesign" LogGroupEntry="_logGroupEntry" />
+	<DailyLogDate SelectedDate="@_dailyLogEntry.Date" />
+	<DailyLogLayout TestDesign="@TestDesign" DailyLogEntry="@_dailyLogEntry" />
+</main>
 
 @code
 {
