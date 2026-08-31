@@ -13,47 +13,6 @@
     padding: clamp(24px, 4vw, 56px);
 }
 
-.daily-log-header {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 24px;
-
-    margin-bottom: clamp(24px, 3vw, 36px);
-}
-
-.daily-log-heading {
-    min-width: 0;
-}
-
-.daily-log-title {
-    margin: 0;
-
-    color: var(--color-text-primary);
-
-    font-size: clamp(24px, 3vw, 34px);
-    line-height: 1.15;
-    font-weight: 700;
-    letter-spacing: -0.025em;
-}
-
-.daily-log-date {
-    margin: 7px 0 0;
-
-    color: var(--color-text-secondary);
-
-    font-size: 14px;
-    line-height: 20px;
-}
-
-.daily-log-actions {
-    flex: 0 0 auto;
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
 .daily-log-groups {
     --daily-log-row-gap: clamp(16px, 2vw, 24px);
 
@@ -98,16 +57,6 @@
 @media (max-width: 720px) {
     .daily-log {
         padding: 20px;
-    }
-
-    .daily-log-header {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .daily-log-actions {
-        width: 100%;
     }
 
     .daily-log-groups {

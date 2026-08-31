@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace DoneIt.Web.Components.DailyLogs;
 
-public partial class DailyLogDate
+public partial class DatePickerLayout
 {
     [Parameter]
     public DateOnly SelectedDate { get; set; }
